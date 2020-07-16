@@ -88,6 +88,8 @@ class TextMessageHandler implements EventHandler
         $replyToken = $this->textMessage->getReplyToken();
         $this->logger->info("Got text message from $replyToken: $text");
 
+        $text=strtolower($text);
+
         switch ($text) {
             case 'profile':
                 $userId = $this->textMessage->getUserId();
@@ -176,7 +178,7 @@ class TextMessageHandler implements EventHandler
                 );
                 $this->bot->replyMessage($replyToken, $imagemapMessageBuilder);
                 break;
-            case 'imagemapVideo':
+            case 'imagemapvideo':
                 $richMessageUrl = UrlBuilder::buildUrl($this->req, ['static', 'rich']);
                 $imagemapMessageBuilder = new ImagemapMessageBuilder(
                     $richMessageUrl,
