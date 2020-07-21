@@ -96,7 +96,7 @@ class TextMessageHandler implements EventHandler
                 $this->sendProfile($replyToken, $userId);
                 break;
             case 'halo':
-                    $this->bot->replyText($replyToken, 'Halo ..kenalin aku dilahirkan Derifato');
+                    $this->bot->replyText($replyToken, 'Halo ..kenalin aku dilahirkan Derifato v2');
                     break;    
             case 'bye':
                 if ($this->textMessage->isRoomEvent()) {
@@ -223,7 +223,7 @@ class TextMessageHandler implements EventHandler
                 $flexMessageBuilder = FlexSampleShopping::get();
                 $this->bot->replyMessage($replyToken, $flexMessageBuilder);
                 break;
-            case 'quickReply':
+            case 'quickreply':
                 $postback = new PostbackTemplateActionBuilder('Buy', 'action=quickBuy&itemid=222', 'Buy');
                 $datetimePicker = new DatetimePickerTemplateActionBuilder(
                     'Select date',
