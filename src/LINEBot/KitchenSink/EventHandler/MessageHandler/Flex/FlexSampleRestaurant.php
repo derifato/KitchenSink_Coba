@@ -69,15 +69,15 @@ class FlexSampleRestaurant
     private static function createHeroBlock()
     {
         return ImageComponentBuilder::builder()
-            ->setUrl('https://example.com/cafe.png')
+            ->setUrl('https://i.ibb.co/s9Gj2Jf/universitas-brawijaya-20180426-133043.jpg')
             ->setSize(ComponentImageSize::FULL)
             ->setAspectRatio(ComponentImageAspectRatio::R20TO13)
             ->setAspectMode(ComponentImageAspectMode::COVER)
             ->setAction(
                 new UriTemplateActionBuilder(
                     null,
-                    'https://example.com',
-                    new AltUriBuilder('https://example.com#desktop')
+                    'https://www.irestech.id/',
+                    new AltUriBuilder('https://www.irestech.id/')
                 )
             );
     }
@@ -90,10 +90,10 @@ class FlexSampleRestaurant
             ->setSize(ComponentFontSize::XL);
 
         $goldStar = IconComponentBuilder::builder()
-            ->setUrl('https://example.com/gold_star.png')
+            ->setUrl('https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gold_star_28.png')
             ->setSize(ComponentIconSize::SM);
         $grayStar = IconComponentBuilder::builder()
-            ->setUrl('https://example.com/gray_star.png')
+            ->setUrl('https://scdn.line-apps.com/n/channel_devcenter/img/fx/review_gray_star_28.png')
             ->setSize(ComponentIconSize::SM);
         $point = TextComponentBuilder::builder()
             ->setText('4.0')
@@ -169,8 +169,8 @@ class FlexSampleRestaurant
             ->setAction(
                 new UriTemplateActionBuilder(
                     'CALL',
-                    'https://example.com',
-                    new AltUriBuilder('https://example.com#desktop')
+                    'https://www.irestech.id/',
+                    new AltUriBuilder('https://www.irestech.id/')
                 )
             );
         $websiteButton = ButtonComponentBuilder::builder()
@@ -179,8 +179,8 @@ class FlexSampleRestaurant
             ->setAction(
                 new UriTemplateActionBuilder(
                     'WEBSITE',
-                    'https://example.com',
-                    new AltUriBuilder('https://example.com#desktop')
+                    'https://www.irestech.id/',
+                    new AltUriBuilder('https://www.irestech.id/')
                 )
             );
         $spacer = new SpacerComponentBuilder(ComponentSpaceSize::SM);
