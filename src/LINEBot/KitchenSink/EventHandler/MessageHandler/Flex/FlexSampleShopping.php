@@ -45,13 +45,13 @@ class FlexSampleShopping
 {
     private static $items = [
         '111' => [
-            'photo' => 'https://example.com/photo1.png',
+            'photo' => 'https://i.ibb.co/s9Gj2Jf/universitas-brawijaya-20180426-133043.jpg',
             'name' => 'Arm Chair, White',
             'price' => 49.99,
             'stock' => true,
         ],
         '112' => [
-            'photo' => 'https://example.com/photo2.png',
+            'photo' => 'https://i.ibb.co/s9Gj2Jf/universitas-brawijaya-20180426-133043.jpg',
             'name' => 'Metal Desk Lamp',
             'price' => 11.99,
             'stock' => false,
@@ -144,8 +144,8 @@ class FlexSampleShopping
             ->setAction(
                 new UriTemplateActionBuilder(
                     'Add to Cart',
-                    'https://example.com',
-                    new AltUriBuilder('https://example.com#desktop')
+                    'https://www.irestech.id/',
+                    new AltUriBuilder('https://www.irestech.id/')
                 )
             );
 
@@ -153,8 +153,8 @@ class FlexSampleShopping
             ->setAction(
                 new UriTemplateActionBuilder(
                     'Add to wishlist',
-                    'https://example.com',
-                    new AltUriBuilder('https://example.com#desktop')
+                    'https://www.irestech.id/',
+                    new AltUriBuilder('https://www.irestech.id/')
                 )
             );
 
@@ -178,8 +178,8 @@ class FlexSampleShopping
                             ->setAction(
                                 new UriTemplateActionBuilder(
                                     'See more',
-                                    'https://example.com',
-                                    new AltUriBuilder('https://example.com#desktop')
+                                    'https://www.irestech.id/',
+                                    new AltUriBuilder('https://www.irestech.id/')
                                 )
                             )
                     ])

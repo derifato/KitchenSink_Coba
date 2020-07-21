@@ -216,7 +216,7 @@ class TextMessageHandler implements EventHandler
                 $this->bot->replyMessage($replyToken, $imagemapMessageBuilder);
                 break;
             case 'restaurant':
-                $flexMessageBuilder = FlexSampleRestaurant::get();
+                $flexMessageBuilder = new FlexSampleRestaurant::get();
                 $this->bot->replyMessage($replyToken, $flexMessageBuilder);
                 break;
             case 'shopping':
