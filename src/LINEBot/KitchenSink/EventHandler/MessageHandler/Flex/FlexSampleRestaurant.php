@@ -60,13 +60,13 @@ class FlexSampleRestaurant
             ->setContents(
                 BubbleContainerBuilder::builder()
                     ->setHero(self::createHeroBlock())
-                    // ->setBody(self::createBodyBlock())
-                    // ->setFooter(self::createFooterBlock())
-                    // ->setSize(BubleContainerSize::GIGA)
+                    ->setBody(self::createBodyBlock())
+                    ->setFooter(self::createFooterBlock())
+                    ->setSize(BubleContainerSize::GIGA)
             );
     }
 
-    private static function createHeroBlock()
+    public static function createHeroBlock()
     {
         return ImageComponentBuilder::builder()
             ->setUrl('https://i.ibb.co/s9Gj2Jf/universitas-brawijaya-20180426-133043.jpg')
@@ -82,7 +82,7 @@ class FlexSampleRestaurant
             );
     }
 
-    private static function createBodyBlock()
+    public static function createBodyBlock()
     {
         $title = TextComponentBuilder::builder()
             ->setText('Brown Cafe')
@@ -161,7 +161,7 @@ class FlexSampleRestaurant
             ->setContents([$title, $review, $info]);
     }
 
-    private static function createFooterBlock()
+    public static function createFooterBlock()
     {
         $callButton = ButtonComponentBuilder::builder()
             ->setStyle(ComponentButtonStyle::LINK)

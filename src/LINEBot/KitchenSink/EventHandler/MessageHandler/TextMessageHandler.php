@@ -96,7 +96,7 @@ class TextMessageHandler implements EventHandler
                 $this->sendProfile($replyToken, $userId);
                 break;
             case 'halo':
-                    $this->bot->replyText($replyToken, 'Halo ..kenalin aku dilahirkan Derifato v2.2');
+                    $this->bot->replyText($replyToken, 'Halo ..kenalin aku dilahirkan Derifato v2.3');
                     break;    
             case 'bye':
                 if ($this->textMessage->isRoomEvent()) {
