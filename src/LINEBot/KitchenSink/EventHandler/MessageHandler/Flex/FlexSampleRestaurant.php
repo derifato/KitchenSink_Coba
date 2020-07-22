@@ -53,38 +53,24 @@ class FlexSampleRestaurant
      *
      * @return \LINE\LINEBot\MessageBuilder\FlexMessageBuilder
      */
-    public static function get()
-    {
-        return FlexMessageBuilder::builder()
-            ->setAltText('restaurant')
-            ->setContents(
-                BubbleContainerBuilder::builder()
-                    ->setHero(self::createHeroBlock())
-                    ->setBody(self::createBodyBlock())
-                    ->setFooter(self::createFooterBlock())
-                    ->setSize(BubleContainerSize::GIGA)
-            );
-    }
+    // public static function get()
+    // {
+    //     return FlexMessageBuilder::builder()
+    //         ->setAltText('restaurant')
+    //         ->setContents(
+    //             BubbleContainerBuilder::builder()
+    //                 ->setHero(self::createHeroBlock())
+    //                 ->setBody(self::createBodyBlock())
+    //                 ->setFooter(self::createFooterBlock())
+    //                 ->setSize(BubleContainerSize::GIGA)
+    //         );
+    // }
 
     public static function createHeroBlock()
     {
-        return ImageComponentBuilder::builder()
-            ->setUrl('https://i.ibb.co/s9Gj2Jf/universitas-brawijaya-20180426-133043.jpg')
-            ->setSize(ComponentImageSize::FULL)
-            ->setAspectRatio(ComponentImageAspectRatio::R20TO13)
-            ->setAspectMode(ComponentImageAspectMode::COVER)
-            ->setAction(
-                new UriTemplateActionBuilder(
-                    null,
-                    'https://www.irestech.id/',
-                    new AltUriBuilder('https://www.irestech.id/')
-                )
-            );
-    }
+        
 
-    public static function createBodyBlock()
-    {
-        $title = TextComponentBuilder::builder()
+            $title = TextComponentBuilder::builder()
             ->setText('Brown Cafe')
             ->setWeight(ComponentFontWeight::BOLD)
             ->setSize(ComponentFontSize::XL);
@@ -154,16 +140,10 @@ class FlexSampleRestaurant
             ->setSpacing(ComponentSpacing::SM)
             ->setContents([$place, $time]);
 
-        return BoxComponentBuilder::builder()
-            ->setLayout(ComponentLayout::VERTICAL)
-            ->setBackgroundColor('#fafafa')
-            ->setPaddingAll('8%')
-            ->setContents([$title, $review, $info]);
-    }
+            
 
-    public static function createFooterBlock()
-    {
-        $callButton = ButtonComponentBuilder::builder()
+
+            $callButton = ButtonComponentBuilder::builder()
             ->setStyle(ComponentButtonStyle::LINK)
             ->setHeight(ComponentButtonHeight::SM)
             ->setAction(
@@ -186,12 +166,24 @@ class FlexSampleRestaurant
         $spacer = new SpacerComponentBuilder(ComponentSpaceSize::SM);
 
         return BoxComponentBuilder::builder()
+            ->setPaddingAll('8%')
             ->setLayout(ComponentLayout::VERTICAL)
             ->setSpacing(ComponentSpacing::SM)
             ->setFlex(0)
             ->setBackgroundColor('#fafafa')
             ->setBorderColor('#e0e0e0')
             ->setBorderWidth('1px')
-            ->setContents([$callButton, $websiteButton, $spacer]);
+            ->setSize(BubleContainerSize::GIGA)
+            ->setContents([$callButton, $websiteButton, $spacer, $title, $review, $info]);   
+    }
+
+    public static function createBodyBlock()
+    {
+        
+    }
+
+    public static function createFooterBlock()
+    {
+       
     }
 }

@@ -96,7 +96,7 @@ class TextMessageHandler implements EventHandler
                 $this->sendProfile($replyToken, $userId);
                 break;
             case 'halo':
-                    $this->bot->replyText($replyToken, 'Halo ..kenalin aku dilahirkan Derifato v2.3');
+                    $this->bot->replyText($replyToken, 'Halo ..kenalin aku dilahirkan Derifato v3');
                     break;    
             case 'bye':
                 if ($this->textMessage->isRoomEvent()) {
@@ -216,7 +216,7 @@ class TextMessageHandler implements EventHandler
                 $this->bot->replyMessage($replyToken, $imagemapMessageBuilder);
                 break;
             case 'restaurant':
-                $flexMessageBuilder = FlexSampleRestaurant::get();
+                $flexMessageBuilder = FlexSampleRestaurant::createHeroBlock();
                 $this->bot->replyMessage($replyToken, $flexMessageBuilder);
                 break;
             case 'shopping':
