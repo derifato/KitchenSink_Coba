@@ -175,15 +175,7 @@ class FlexSampleRestaurant
             ->setBorderWidth('1px')
             ->setSize(BubleContainerSize::GIGA)
             ->setContents([$callButton, $websiteButton, $spacer, $title, $review, $info]);   
-    }
+    };
 
-    public static function createBodyBlock()
-    {
-        
-    }
 
-    public static function createFooterBlock()
-    {
-       
-    }
-}
+};

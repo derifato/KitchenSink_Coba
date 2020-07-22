@@ -74,7 +74,7 @@ class FlexSampleShopping
             ]));
     }
 
-    private static function createItemBubble($itemId)
+    public static function createItemBubble($itemId)
     {
         $item = self::$items[$itemId];
         return BubbleContainerBuilder::builder()
