@@ -56,13 +56,13 @@ class FlexSampleRestaurant
     public static function get()
     {
         return FlexMessageBuilder::builder()
-            ->setAltText('Restaurant')
+            ->setAltText('restaurant')
             ->setContents(
                 BubbleContainerBuilder::builder()
                     ->setHero(self::createHeroBlock())
-                    ->setBody(self::createBodyBlock())
-                    ->setFooter(self::createFooterBlock())
-                    ->setSize(BubleContainerSize::GIGA)
+                    // ->setBody(self::createBodyBlock())
+                    // ->setFooter(self::createFooterBlock())
+                    // ->setSize(BubleContainerSize::GIGA)
             );
     }
 
